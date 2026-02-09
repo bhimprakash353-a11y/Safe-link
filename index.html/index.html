@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+  <meta charset="UTF-16">
+  <title>Safe Link Please open!!</title>
+  <style>
+    body {
+      background-color: #ffcad4;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    #noBtn {
+      position: absolute;
+      background-color: #ff6666;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: #66cc66;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will you be my Valentine? 💖</h1> 
+  <img src= "1000058238.gif" "C:\Users\Sunil\Desktop\index.html\1000058238.gif" lenth="250" width="250">
+  <div class="button-container">
+    <button id="yesBtn" style="top: 0px; left: 16px;">Yes</button>
+    <button id="noBtn" style="top: 277px; left: 825px;">No</button>
+  </div>
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    yesBtn.addEventListener("click", () => {
+      window.location.href = "yes.html";
+    });
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
